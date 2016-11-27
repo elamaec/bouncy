@@ -1,0 +1,535 @@
+
+/** Colors **/
+
+$secondary-color : #19bd9a;
+$bg-color: #F3F3F3;
+$plain-text : #333b46;
+$overlay : #151517;
+
+/** Font Family **/
+
+$bigjohn : 'Big John';
+$opensans : 'Open Sans', sans-serif;
+$sourcesans : 'Source Sans Pro', sans-serif;
+$roboto : 'Roboto', sans-serif;
+
+
+html, body {
+	width: 100%;
+	height: 100%;
+	font-family: $opensans;
+}
+
+@font-face {
+    font-family: Big John;
+    src: url(http://bouncy.dev/fonts/bigjohn.otf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Stroke;
+    src: url(http://bouncy.dev/fonts/icons.ttf);
+}
+
+.col-reset {
+	padding: 0;
+}
+
+.title {
+	font-family: $sourcesans;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-size: 20px;
+	padding-bottom: 20px;
+}
+
+.simple-title {
+	font-family: $opensans;
+	font-size: 20px;
+	padding-bottom: 20px;
+}
+
+.excerpt {
+	color: #81868e;
+	font-family: $opensans;
+	letter-spacing: 1px;
+}
+
+/** Navigation **/
+
+header {
+	.navbar-default {
+		background-image: none;
+		background-color: transparent;
+		border: none;
+		box-shadow: none;
+		padding: 30px 0;
+		position: absolute;
+		right: 0;
+		left: 0;
+	}
+
+	.navbar {
+		border: none;
+	}
+
+	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+		border: none;
+	}
+
+	.navbar-brand, .navbar-nav>li>a {
+		text-shadow: none;
+	}
+
+	.navbar-brand {
+		font-size: 25px;
+	}
+
+	.navbar-default .navbar-brand {
+    color: #fff;
+		text-transform: uppercase;
+		font-family: $bigjohn;
+		font-weight: 600;
+	}
+
+	.navbar-default .navbar-nav>li>a {
+    color: #fff;
+		font-size: 16px;
+	}
+
+	.navbar-default .navbar-nav>.active>a {
+		background-image: none;
+		color: #fff;
+		background-color: transparent;
+		border: 1px solid #fff;
+		border-radius: 26px;
+		transition: all 0.5s ease;
+	}
+
+	.navbar-default .navbar-nav>.active>a:hover {
+		background-color: #fff;
+	}
+
+}
+
+/** Banner **/
+
+.banner-section {
+	height: auto;
+
+	.banner{
+		background-image: url('http://bouncy.dev/img/banner-img.jpg');
+		background-position: top, center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: auto;
+	}
+
+	.content {
+		color: #fff;
+		display: table;
+		margin: 30% auto;
+	}
+
+	.content h1{
+		font-family: $sourcesans;
+		text-transform: uppercase;
+		letter-spacing: 8px;
+    font-weight: lighter;
+		line-height: 70px;
+	}
+
+	.content p{
+		font-family: $opensans;
+		font-size: 16px;
+		letter-spacing: 1px;
+	}
+
+	.arrow {
+		position: relative;
+		top: -50px;
+	}
+
+	.arrow a {
+    background-color: $secondary-color;
+    padding: 10px 5px;
+    border-radius: 50%;
+	}
+
+	.arrow i {
+		color: #fff;
+		font-size: 30px;
+		vertical-align: middle;
+	}
+
+}
+
+/** About **/
+
+.about-section {
+
+	.content {
+	  max-width: 600px;
+		position: relative;
+		left: 30%;
+	}
+
+	.content-img {
+		background-color: $bg-color;
+	}
+
+	.excerpt {
+		font-family: $opensans;
+		font-size: 14px;
+		letter-spacing: 1px;
+		padding: 50px 0px;
+	}
+
+	.img {
+		position: relative;
+		right: 15%;
+	}
+
+	.content-wrapper, .content-img {
+		padding: 100px 0;
+	}
+}
+
+/** About Details **/
+
+.about-details {
+
+	background-color: $bg-color;
+	padding-top: 100px;
+	padding-bottom: 30px;
+
+	.excerpt {
+		max-width: 500px;
+		line-height: 30px;
+    margin: auto;
+	}
+
+	ul, li {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		display: inline-block;
+	}
+
+	li {
+		font-size: 30px;
+		color: #fff;
+		background-color: $secondary-color;
+		padding: 15px 22px;
+	  border-radius: 50%;
+	  margin: 25px;
+	}
+
+	i {
+		vertical-align: middle;
+	}
+
+}
+
+.creative-ideas {
+	padding-top: 0;
+	padding-bottom: 100px;
+	background-color: $bg-color;
+
+		.col-2 .excerpt {
+				padding-top: 50px;
+		}
+
+		.col-1 .excerpt {
+			max-width: 350px;
+		}
+}
+
+.featured-projects {
+		padding: 50px 0;
+
+		.excerpt {
+			max-width: 500px;
+	    line-height: 30px;
+	    margin: auto;
+		}
+
+		.thumbnail {
+			border: none;
+			border-radius: 0;
+			box-shadow: none;
+			width: 100%;
+			height: 400px;
+			background-position: center, center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 0;
+    	margin: 0;
+		}
+
+		.thumbnail-img {
+			width: 100%;
+			height: 400px;
+			background-position: center, center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		.overlay {
+			width: 100%;
+			height: 400px;
+			background-color: $overlay;
+			opacity: .8;
+		}
+
+		.project-title {
+	    color: #fff;
+	    text-transform: uppercase;
+			font-family: $sourcesans;
+	    font-size: 24px;
+	    letter-spacing: 4px;
+	    position: absolute;
+	    top: 50%;
+	    right: 0;
+	    left: 0;
+	}
+
+	.fold-footer {
+		background-image: url("http://bouncy.dev/img/fold-footer.jpg");
+		background-position: center, center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding: 40px 0;
+	}
+
+	.fold-footer .content {
+		color: #fff;
+		font-size: 20px;
+	}
+
+	.button a {
+			color: #fff;
+			border: 1px solid #fff;
+			padding: 10px 20px;
+			border-radius: 50px;
+			font-size: 16px;
+		}
+
+}
+
+.services {
+	padding: 50px 0 100px 0;
+	.excerpt {
+				line-height: 30px;
+				margin: auto;
+		    max-width: 500px;
+	}
+
+	.excerpt p {
+		margin: 10px 0px 25px;
+	}
+
+	.simple-title {
+		margin-top: 10px;
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		padding: 5px 0;
+	}
+
+	li i {
+		font-size: 30px;
+		background-color: $secondary-color;
+		padding: 10px;
+		border-radius: 50%;
+		color: #fff;
+		vertical-align: middle;
+	}
+
+	.percentage {
+		display: table;
+	}
+
+	.pie {
+  display: inline-block;
+  position: relative;
+  width: 1em;
+  height: 1em;
+  background-color: #047378;
+  font-size: 7em;
+  text-align: center;
+  border-radius: 50%;
+}
+.slice-right {
+  position: absolute;
+  z-index: 11;
+  background-color: #19bd9a;
+  width: 100%;
+  height: 100%;
+  clip: rect(.2em, 1em, 1em, 0em);
+  border-radius: 50%;
+}
+.slice-left {
+  position: absolute;
+  z-index: 11;
+  background-color: #19bd9a;
+  width: 100%;
+  height: 100%;
+  clip: rect(0, 0.5em, 1em, 0);
+  border-radius:50%;
+  }
+
+.percent {
+  position: absolute;
+  z-index: 20;
+  top: 3px;
+  right: 3px;
+  bottom: 3px;
+  left: 3px;
+  background: #fff;
+  border-radius:50%;
+}
+
+.number {
+  position: absolute;
+  z-index: 30;
+  width: 100%;
+  height: 100%;
+  padding-top: 50%;
+  line-height: 0;
+  font-size: 20px;
+  color: #485c65;
+	font-family: $opensans;
+}
+
+.number span {
+	font-size: 14px;
+}
+
+.skill-label {
+	color: #81868e;
+	font-family: $roboto;
+	font-size: 16px;
+	letter-spacing: 1px;
+	font-weight: lighter;
+	padding-top: 10px;
+}
+
+.skills li {
+	display: inline-block;
+	padding-top: 50px;
+	padding-right: 50px;
+	padding-left: 20px;
+}
+
+/* $animation-speed: .3s;
+.slice-right {
+  -webkit-animation-delay: $animation-speed * 4;
+  -webkit-animation-duration: $animation-speed;
+  -webkit-animation-name: right-slice;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.slice-left {
+  -webkit-animation-delay: $animation-speed * 5;
+  -webkit-animation-duration: $animation-speed;
+  -webkit-animation-name: left-slice;
+  -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+}
+
+ @-webkit-keyframes right-slice {
+  from {
+    clip: rect(0, 50%, .5em, .5em);
+  }
+  50% {
+    clip: rect(0, 1em, .5em, .5em);
+  }
+  to {
+    clip: rect(0, 1em, 1em, .5em);
+  }
+}
+
+@-webkit-keyframes left-slice {
+  from {
+    clip: rect(.5em, .5em, 1em, .5em);
+  }
+  50% {
+    clip: rect(.5em, .5em, 1em, 0)
+  }
+  to {
+    clip: rect(.3em, .5em, 1em, 0);
+  }
+}*/
+
+}
+
+.team-quotes {
+
+	padding: 100px 0;
+	color: #fff;
+	background-image: url("http://bouncy.dev/img/team-quotes.jpg");
+	background-position: center, center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #b2b3b3;
+	position: relative;
+
+		.simple-title {
+			color: #fff;
+		}
+
+		.quote {
+	    font-size: 16px;
+			line-height: 30px;
+			padding-bottom: 30px;
+			text-align: justify;
+		}
+
+		.name {
+			text-transform: uppercase;
+			font-family: $opensans;
+			font-weight: bold;
+			letter-spacing: 1px;
+		}
+
+		.position {
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+
+		.position span {
+			color: $secondary-color;
+		}
+
+		.img-container {
+			position: absolute;
+	    top: -130px;
+		}
+
+		.monitor-label {
+			color: #fff;
+			text-transform: uppercase;
+			font-family: $bigjohn;
+			font-weight: 600;
+			font-size: 30px;
+			position: absolute;
+			top: -20px;
+	    right: 0;
+	    left: 0;
+			z-index: 1;
+		}
+
+		.monitor-label span {
+			color: $secondary-color;
+		}
+
+}
