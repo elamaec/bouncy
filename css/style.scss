@@ -55,6 +55,12 @@ html, body {
 	letter-spacing: 1px;
 }
 
+.ul-reset {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
 /** Navigation **/
 
 header {
@@ -891,17 +897,93 @@ header {
 			margin: auto;
 			color: #81868e;
 		}
+		.form-inline {
+			display: table;
+			margin: auto;
+		}
+		.subscription-form {
+			padding: 40px 0 0 0;
+		}
 		.form-control {
-			max-width: 500px;
+			width: 400px;
+			height: 40px;
 			background-color: transparent;
 			border-radius: 0;
 			color: #fff;
 		}
 		a {
 			background-color: $secondary-color;
+			color: #fff;
 			text-transform: uppercase;
 			font-family: $opensans;
 			padding: 10px 40px;
+			position: relative;
+			top: 1px;
+			margin: 0 10px;
 		}
+}
 
+.contact {
+	padding: 100px 0;
+	background-color: $bg-color;
+		.excerpt {
+			margin: auto;
+			max-width: 500px;
+			line-height: 30px;
+		}
+		.contact-thumbnail {
+			max-width: 300px;
+			margin: 30px auto;
+			background-color: #fff;
+			.icon-container {
+				background-position: center, center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				padding: 50px 0;
+				i {
+					font-size: 50px;
+					color: #fff;
+				}
+			}
+			.contact-label {
+				color: #464646;
+				font-size: 16px;
+				font-family: $opensans;
+				text-transform: uppercase;
+				padding: 20px 0;
+			}
+			.contact-content {
+				color: #81868e;
+				font-fvamily: $opensans;
+				text-transform: uppercase;
+				padding-bottom: 20px;
+			}
+		}
+}
+
+.contact-form {
+	padding: 100px 0;
+		input {
+			margin-top: 20px;
+		}
+		.message {
+			margin-top: 20px;
+			resize: none;
+			width: 100%;
+			height: 200px;
+		}
+		.message:focus {
+			width: 100%;
+		}
+		.button{
+			background-color: $secondary-color;
+				a {
+					display: block;
+					padding: 15px;
+					color: #fff;
+					font-family: $opensans;
+					text-transform: uppercase;
+					font-size: 16px;
+				}
+		}
 }

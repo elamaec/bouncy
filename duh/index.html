@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+  <title>Bouncy - Just a practice</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <link rel="stylesheet" href="http://bouncy.dev/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://bouncy.dev/css/bootstrap-theme.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="http://bouncy.dev/css/pe-icon-7-stroke.css">
+  <link rel="stylesheet" href="http://bouncy.dev/css/helper.css">
+  <link rel="stylesheet" href="http://bouncy.dev/css/style.min.css">
+
+</head>
+<body>
+
+<!-- Map -->
+<div id="map">
+  <iframe src="https://www.google.com/maps/d/embed?mid=1gaQSzilmEXF7ALoUH7VAifYe9fg&hl=en_US" width="640" height="480"></iframe>
+</div>
+<!--/Map -->
+
+<script src="http://bouncy.dev/js/jquery-3.1.1.min.js"></script>
+<script src="http://bouncy.dev/js/bootstrap.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDotkWXzFv_CobemYvMKYcDwO2KKzKgvkc"></script>
+<script>
+window.onload = function () {
+  var styles = [
+    // we will add the style rules here.
+  ];
+  var options = {
+    mapTypeControlOptions: {
+      mapTypeIds: ['Styled']
+    },
+    zoom: 16,
+    disableDefaultUI: true,
+    mapTypeId: 'Styled'
+  };
+  var div = document.getElementById('map');
+  var map = new google.maps.Map(div, options);
+  var styledMapType = new google.maps.StyledMapType(styles, { name: 'Styled' });
+  map.mapTypes.set('Styled', styledMapType);
+}
+</script>
+</body>
+</html>
