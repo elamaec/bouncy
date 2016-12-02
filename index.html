@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <link rel="stylesheet" href="http://bouncy.dev/css/bootstrap.min.css">
   <link rel="stylesheet" href="http://bouncy.dev/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="http://bouncy.dev/css/font-awesome.min.css" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -160,7 +161,7 @@
       </div>
     </div>
     <div class="container-fluid">
-      <div class="row">
+      <div class="row projects">
         <div class="col-xs-12 col-sm-12 col-md-6 col-reset text-center">
           <div class="thumbnail" style="background-image: url('http://bouncy.dev/img/img-1-a.jpg');">
             <div class="thumbnail-img" style="background-image: url('http://bouncy.dev/img/img-1.jpg');">
@@ -1146,12 +1147,230 @@
 <!-- /Contact Form -->
 
 <!-- Map -->
-<div id="map">
-  <!--<iframe src="https://www.google.com/maps/d/embed?mid=1gaQSzilmEXF7ALoUH7VAifYe9fg&hl=en_US" width="640" height="480"></iframe>-->
-</div>
+<section class="map">
+  <div id="map">
+    <div class="map-overlay">
+    </div>
+  </div>
+  <div class="map-overlay">
+  </div>
+  <div class="view-map text-center">
+    Find us on the map
+    <i class="pe-7s-angle-down"></i>
+  </div>
+</section>
 <!--/Map -->
+
+<!-- Footer -->
+
+<section class="footer text-center">
+  <div class="footer-logo">
+    Bouncy
+  </div>
+  <div class="footer-copyright">
+    Copyright 2015. All rights Reserved
+  </div>
+  <div class="social-icons">
+    <ul class="ul-reset">
+      <li class="facebook-icon"><i class="fa fa-facebook" aria-hidden="true"></i></li>
+      <li class="twitter-icon"><i class="fa fa-twitter" aria-hidden="true"></i></li>
+      <li class="linkedin-icon"><i class="fa fa-linkedin" aria-hidden="true"></i></li>
+      <li class="instagram-icon"><i class="fa fa-instagram" aria-hidden="true"></i></li>
+      <li class="vimeo-icon"><i class="fa fa-vimeo" aria-hidden="true"></i></li>
+    </ul>
+  </div>
+</section>
+
+<!-- /Footer -->
 
 <script src="http://bouncy.dev/js/jquery-3.1.1.min.js"></script>
 <script src="http://bouncy.dev/js/bootstrap.min.js"></script>
+<script>
+function initMap() {
+  // Styles a map in night mode.
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 40.674, lng: -73.945},
+    zoom: 12,
+    styles: [
+      {
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#e9e9e9"
+          },
+          {
+            "lightness": 17
+          }
+        ]
+      },
+      {
+        "featureType": "landscape",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#f5f5f5"
+          },
+          {
+            "lightness": 20
+          }
+        ]
+      },
+      {
+        "featureType": "road.highway",
+        "elementType": "geometry.fill",
+        "stylers": [
+          {
+            "color": "#ffffff"
+          },
+          {
+            "lightness": 17
+          }
+        ]
+      },
+      {
+        "featureType": "road.highway",
+        "elementType": "geometry.stroke",
+        "stylers": [
+          {
+            "color": "#ffffff"
+          },
+          {
+            "lightness": 29
+          },
+          {
+            "weight": 0.2
+          }
+        ]
+      },
+      {
+        "featureType": "road.arterial",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#ffffff"
+          },
+          {
+            "lightness": 18
+          }
+        ]
+      },
+      {
+        "featureType": "road.local",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#ffffff"
+          },
+          {
+            "lightness": 16
+          }
+        ]
+      },
+      {
+        "featureType": "poi",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#f5f5f5"
+          },
+          {
+            "lightness": 21
+          }
+        ]
+      },
+      {
+        "featureType": "poi.park",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#dedede"
+          },
+          {
+            "lightness": 21
+          }
+        ]
+      },
+      {
+        "elementType": "labels.text.stroke",
+        "stylers": [
+          {
+            "visibility": "on"
+          },
+          {
+            "color": "#ffffff"
+          },
+          {
+            "lightness": 16
+          }
+        ]
+      },
+      {
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "saturation": 36
+          },
+          {
+            "color": "#333333"
+          },
+          {
+            "lightness": 40
+          }
+        ]
+      },
+      {
+        "elementType": "labels.icon",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "transit",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#f2f2f2"
+          },
+          {
+            "lightness": 19
+          }
+        ]
+      },
+      {
+        "featureType": "administrative",
+        "elementType": "geometry.fill",
+        "stylers": [
+          {
+            "color": "#fefefe"
+          },
+          {
+            "lightness": 20
+          }
+        ]
+      },
+      {
+        "featureType": "administrative",
+        "elementType": "geometry.stroke",
+        "stylers": [
+          {
+            "color": "#fefefe"
+          },
+          {
+            "lightness": 17
+          },
+          {
+            "weight": 1.2
+          }
+        ]
+      }
+    ]
+  });
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDotkWXzFv_CobemYvMKYcDwO2KKzKgvkc&callback=initMap"
+async defer></script>
 </body>
 </html>

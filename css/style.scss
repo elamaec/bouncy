@@ -300,6 +300,10 @@ header {
 	    left: 0;
 	}
 
+	.projects {
+		padding-top: 50px;
+	}
+
 	.fold-footer {
 		background-image: url("http://bouncy.dev/img/fold-footer.jpg");
 		background-position: center, center;
@@ -985,5 +989,87 @@ header {
 					text-transform: uppercase;
 					font-size: 16px;
 				}
+		}
+}
+
+.map {
+	position: relative;
+	#map {
+        height: 500px;
+				width: 100%;
+      }
+	.map-overlay {
+		height: 500px;
+		width: 100%;
+		background-color: #000;
+		opacity: .9;
+		position: absolute;
+		top: 0;
+	}
+	.view-map {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		left: 0;
+		text-transform: uppercase;
+		color: #fff;
+		font-size: 16px;
+		font-family: $opensans;
+		letter-spacing: 1px;
+			i {
+				background-color: $secondary-color;
+				border-radius: 50%;
+				margin: 0 10px;
+		    position: relative;
+		    top: 1px;
+			}
+	}
+}
+
+.footer {
+	padding: 100px 0;
+		.footer-logo {
+			font-family: $bigjohn;
+			font-size: 25px;
+			color: #323a45;
+			text-transform: uppercase;
+		}
+		.footer-copyright {
+			font-family: $opensans;
+			color: #81868e;
+			padding-top: 10px;
+		}
+		ul {
+			padding-top: 20px;
+		}
+		ul li {
+			display: inline-block;
+			margin: 0 5px;
+			background-color: $secondary-color;
+			padding:2px 7px;
+			border-radius: 50%;
+		}
+
+		i {
+			vertical-align: middle;
+			color: #fff;
+			font-size: 11px;
+		}
+
+		.facebook-icon {
+			background-color: #3b5998;
+			padding: 2px 9px;
+		}
+		.twitter-icon {
+			background-color: #26a6d1;
+		}
+		.linkedin-icon {
+			background-color: #0e76a8;
+		}
+		.instagram-icon {
+			background-color: #3f729b;
+		}
+		.vimeo-icon {
+			background-color: #86c9ef;
 		}
 }
